@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.buttondiv
+		{
+			width: 50%;
+			float: left;
+		}
+		#d1, #d1 button
+		{
+			margin: 0 auto;
+			font-family: KaiTi;
+			font-size: 20px;
+		}
+		#d2
+		{
+			display: none;
+			width: 100%;
+			text-align: center;
+			font-family: STXingkai;
+			font-size: 25px;
+			color: red;
+		}
+	</style>
+</head>
+<body style="display: flex; width: 100%;">
+	<div id="d1">
+		<p>宝贝我错了，原谅我好不好嘛</p>
+		<div class="buttondiv">
+			<button id="b1" onmouseover="trans('b1')" onclick="clickbu('b1')" value="yes">好</button>
+		</div>
+		<div class="buttondiv">
+			<button id="b2" onmouseover="trans('b2')" onclick="clickbu('b2')" value="no">不好</button>
+		</div>		
+	</div>
+	<div id="d2">
+		<p>嘿嘿，就知道老婆最好了</p>
+		<p>不生气了啊，么么么（づ￣3￣）づ╭❤～</p>
+	</div>
+	<script type="text/javascript">
+		function trans(b)
+		{
+			var bu=document.getElementById(b);
+			var b1=document.getElementById('b1');
+			var b2=document.getElementById('b2');
+			if(bu.value=="no")
+			{
+				if(b=="b1")
+				{
+					b1.value="yes";
+					b1.innerText="好";
+					b2.value="no";
+					b2.innerText="不好";
+				}
+				else if(b=="b2")
+				{
+					b2.value="yes";
+					b2.innerText="好";
+					b1.value="no";
+					b1.innerText="不好";
+				}
+			}
+		}
+	</script>
+	<script type="text/javascript">
+		function clickbu(b)
+		{
+			var bu=document.getElementById(b);
+			var b1=document.getElementById('b1');
+			var b2=document.getElementById('b2');
+			if(bu.value=="no")
+			{
+				if(b=="b1")
+				{
+					b1.value="yes";
+					b1.innerText="好";
+					b2.value="no";
+					b2.innerText="不好";
+				}
+				else if(b=="b2")
+				{
+					b2.value="yes";
+					b2.innerText="好";
+					b1.value="no";
+					b1.innerText="不好";
+				}
+			}
+			else 
+			{
+				var d1=document.getElementById('d1');
+				var d2=document.getElementById('d2');
+				d1.style.display="none";
+				d2.style.display="block";
+			}
+		}
+	</script>
+</body>
+</html>
